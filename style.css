@@ -1,0 +1,156 @@
+/* ===== Root Theme ===== */
+:root {
+  --mint: #dff5ea;
+  --teal: #5fb3a2;
+  --green: #8fd9c8;
+  --dark: #1f3d3a;
+  --white: #ffffff;
+}
+
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, var(--mint), #f9fffc);
+  color: var(--dark);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.navbar nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.navbar nav a:hover {
+  color: var(--teal);
+}
+
+/* ===== Hero ===== */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.primary-btn {
+  margin-top: 1.5rem;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, var(--teal), var(--green));
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(95,179,162,0.4);
+}
+
+/* ===== Sections ===== */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.soft-bg {
+  background: var(--mint);
+  border-radius: 40px;
+}
+
+/* ===== To-Do ===== */
+.todo-container {
+  display: flex;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.todo-container input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+}
+
+.todo-container button {
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  background: var(--teal);
+  color: white;
+}
+
+#todoList li {
+  background: white;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ===== Products ===== */
+.controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

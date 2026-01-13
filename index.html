@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Portfolio App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ===== Sticky Navigation ===== -->
+<header class="navbar">
+  <div class="logo">🌱 MyPortfolio</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#todo">To-Do</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ===== Home ===== -->
+<section id="home" class="hero">
+  <h1>Designing Calm, Modern Web Experiences</h1>
+  <p>Front-End Developer | UI/UX Designer</p>
+  <button class="primary-btn">Explore My Work</button>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    I specialize in crafting beautiful, responsive, and interactive web interfaces
+    using clean HTML, CSS, and JavaScript. My focus is on usability, accessibility,
+    and delightful user experiences.
+  </p>
+</section>
+
+<!-- ===== To-Do App ===== -->
+<section id="todo" class="section soft-bg">
+  <h2>📝 To-Do / Notes App</h2>
+
+  <div class="todo-container">
+    <input id="todoInput" placeholder="Write a note..." />
+    <button onclick="addTodo()">Add</button>
+  </div>
+
+  <ul id="todoList"></ul>
+</section>
+
+<!-- ===== Products ===== -->
+<section id="products" class="section">
+  <h2>🛍 Product Listing</h2>
+
+  <div class="controls">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="tech">Tech</option>
+      <option value="fashion">Fashion</option>
+    </select>
+
+    <select id="sortFilter">
+      <option value="default">Sort</option>
+      <option value="priceLow">Price: Low → High</option>
+      <option value="priceHigh">Price: High → Low</option>
+      <option value="rating">Highest Rating</option>
+    </select>
+  </div>
+
+  <div id="productGrid" class="product-grid"></div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact" class="section soft-bg">
+  <h2>Contact Me</h2>
+  <p>Email: yourname@email.com</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
